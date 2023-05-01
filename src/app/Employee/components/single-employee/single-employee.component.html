@@ -1,0 +1,28 @@
+<div class="emoloyee">
+  <div class="employee-info-container">
+    <div class="employee-info-container-image">
+    <img src="https://images.unsplash.com/photo-1550314124-301ca0b773ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2215&q=80">
+    </div>
+    <div class="employee-info-container-name">
+      <h4>{{employee.name}} </h4>
+      <p>{{employee.jobTitle}}</p>
+    </div>
+  </div>
+  <hr>
+  <div class="employee-email">
+    {{employee.email}}
+  </div>
+  <hr>
+  <div class="employee-phone">
+    PHONE : {{employee.phone}}
+  </div>
+  <hr>
+  <div class="employee-buttons">
+    <div class="employee-buttons-edit" (click)="updatepopup()">
+      <i class="fa-solid fa-pen-to-square"></i>
+    </div>
+    <div class="employee-buttons-delete" (click)="deletepopup()">
+      <i class="fa-solid fa-trash" ></i>
+    </div>
+  </div>
+</div>

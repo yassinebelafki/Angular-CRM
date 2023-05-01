@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="pop-up.component.css">
+<div class="popup">
+  <div class="popup-in slide-in-top">
+    <div class="popup-in-header">
+      <h3>title</h3>
+      <div class="popup-in-header-x" (click)="closeAdd()">
+        <i class="fa-solid fa-x"></i>
+      </div>
+    </div>
+      <hr>
+    <div class="pupup-in-form">
+      <form #form="ngForm" (ngSubmit)="addNewEmployee(form)">
+        <div class="popup-in-form-list">
+        <label >Name</label>
+        <input type="text" name="name" ngModel required>
+        <label >Email</label>
+        <input type="text" name="email" ngModel required>
+        <label >JobTitle</label>
+        <input type="text" name="jobTitle" ngModel required>
+        <label >Phone</label>
+        <input type="text" name="phone" ngModel required>
+          <label >Image</label>
+          <input type="file" name="imageUrl" ngModel required>
+        </div>
+        <hr>
+        <div class="popup-in-form-buttons">
+          <input type="button" value="close" class="close-button" (click)="closeAdd()">
+          <button class="save-button" name="save" type="submit" [disabled]="form.invalid">save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

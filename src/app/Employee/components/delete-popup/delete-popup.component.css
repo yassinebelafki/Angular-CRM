@@ -1,0 +1,46 @@
+.popup {
+  position: fixed;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-in {
+  width: 400px;
+  background-color: white;
+  transition: all 0.3s;
+  animation: popuup-in 0.1s ease-in-out forwards;
+
+}
+
+.popup-in-header-x i {
+  cursor: pointer;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

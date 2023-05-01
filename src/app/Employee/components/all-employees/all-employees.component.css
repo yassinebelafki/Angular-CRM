@@ -1,0 +1,124 @@
+.main-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.list-employee {
+ display: grid;
+  grid-template-columns: auto auto auto auto ;
+  grid-gap: 5px;
+  align-content: center;
+
+}
+
+
+@media screen and (max-width:1200px ){
+  .list-employee {
+    grid-template-columns: auto auto auto  ;
+  }
+}
+
+@media screen and (max-width:920px ){
+  .list-employee {
+    margin: 20px 30px;
+    grid-template-columns: auto auto  ;
+
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .list-employee {
+    margin: 20px 20px;
+    grid-template-columns: auto ;
+
+  }
+
+}
+.popup {
+  position: fixed;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-in {
+  width: 400px;
+  background-color: white;
+  transition: all 0.3s;
+  animation: popuup-in 0.1s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 5px;
+  gap: 10px;
+
+}
+
+.popup-in-header-x i {
+  cursor: pointer;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+.popup-in-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pupup-in-alert {
+  margin: 10px 0px;
+}
+.popup-in-decistion {
+  margin: 10px 0px;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.popup-in-decistion button {
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-no {
+  background: #2C3333;
+}
+.btn-yes {
+  background: red;
+}

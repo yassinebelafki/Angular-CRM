@@ -1,0 +1,32 @@
+<div class="navbar">
+  <div class="navbar-links">
+    <div class="navbar-links-logo">
+      <i class="fa-brands fa-java logo"></i>
+    </div>
+    <div class="navbar-links-container">
+      <p>Home</p>
+      <p>Pricing</p>
+      <p (click)="toggleAdd()">Add Employee</p>
+      <p>Who we are?</p>
+    </div>
+  </div>
+  <div class="navbar-saerch">
+  <input type="search" class="search-bar" placeholder="Search..." [(ngModel)]="search" (input)="searchFired()">
+  </div>
+  <div class="navbar-menu" >
+    <div *ngIf="!toggled" (click)="toggled=true">
+    <i class="fa-solid fa-bars" style="color: white"></i>
+    </div>
+    <div *ngIf="toggled" (click)="toggled=false">
+    <i class="fa-solid fa-x" style="color: white" ></i>
+    </div>
+    <div class="navbar-menu-links-container slide-left"  *ngIf="toggled">
+    <p>Home</p>
+    <p>Pricing</p>
+    <p>Add Employee</p>
+    <p>Who we are?</p>
+    <input type="search" class="search-bar" placeholder="Search..." [(ngModel)]="search" (input)="searchFired()">
+  </div>
+  </div>
+
+</div>

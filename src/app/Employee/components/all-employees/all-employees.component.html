@@ -1,0 +1,30 @@
+<div class="main-con">
+<div class="list-employee">
+<app-single-employee [employee]="employee" *ngFor="let employee of employees"
+                     (emitDelete)="toggleDelete(employee.id)"
+                     (emitupdate)="toggleUpdate(employee)">
+</app-single-employee>
+</div>
+
+<app-pop-up *ngIf="Addtogled" (toggled)="closeAdd()"></app-pop-up>
+<app-pop-up-update *ngIf="UpdateToggle" [employee]="employeeToUpdate" (toggled)="closeUpdate()"></app-pop-up-update>
+<div class="popup" *ngIf="deleted">
+  <div class="popup-in scale-up-center">
+    <div class="popup-in-header">
+      <h3>Delete Employee</h3>
+      <div class="popup-in-header-x" (click)="deleted=false">
+        <i class="fa-solid fa-x"></i>
+      </div>
+    </div>
+    <div class="pupup-in-alert">
+      are you wanna delete this employee ?
+    </div>
+    <div class="popup-in-decistion">
+      <button class="btn-no" (click)="deleted=false">No</button>
+      <button class="btn-yes" (click)="deleteEmployee()">Yes</button>
+    </div>
+  </div>
+</div>
+
+
+</div>
